@@ -47,6 +47,30 @@ public class ReportTest {
     }
 
     @Test
+    public void isSameReportMethod() {
+        // same object -> returns true
+        assertTrue(ALICE_REPORT.isSameReport(ALICE_REPORT));
+
+        // null -> returns false
+        assertFalse(ALICE_REPORT.isSameReport(null));
+
+        // different report -> returns false
+        assertFalse(ALICE_REPORT.isSameReport(BOB_REPORT));
+
+        // different employee -> returns false
+        Report editedAliceReport = new Report(BOB, "Alice's Report", "Alice's Report Description");
+        assertFalse(ALICE_REPORT.isSameReport(editedAliceReport));
+
+        // different title -> returns false
+        editedAliceReport = new Report(ALICE, "Bob's Report", "Alice's Report Description");
+        assertFalse(ALICE_REPORT.isSameReport(editedAliceReport));
+
+        // different description -> returns false
+        editedAliceReport = new Report(ALICE, "Alice's Report", "Bob's Report Description");
+        assertFalse(ALICE_REPORT.isSameReport(editedAliceReport));
+    }
+
+    @Test
     public void toStringMethod() {
         String expectedString = "Report ID: " + ALICE_REPORT.getReportId()
                 + " Employee: " + ALICE_REPORT.getEmployee()

@@ -80,6 +80,17 @@ public class Report {
                 && otherReport.getDescription().equals(getDescription());
     }
 
+    public boolean isSameReport(Report otherReport) {
+        if (otherReport == this) {
+            return true;
+        }
+
+        return otherReport != null
+                && otherReport.getEmployee().equals(getEmployee())
+                && otherReport.getTitle().equals(getTitle())
+                && otherReport.getDescription().equals(getDescription());
+    }
+
     @Override
     public String toString() {
         final StringBuilder builder = new StringBuilder();
