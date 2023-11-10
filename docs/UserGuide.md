@@ -525,34 +525,27 @@ This command is used to add an employee to the address book. Let's examine how w
 
 ### Find leave records by time period: `find-leave-range`
 
-* **What It Does:**
-  * Finds all leave records in HRMate in a given time period. There are 4 possible scenarios:
-  * 1) The time period has a start date and an end date (inclusive) - all leaves with at least one day that falls within
-      this period will be displayed
-    2) The time period only has a start date (inclusive) - all leaves that either occur on the start date or will occur
-      after the start date will be displayed
-    3) The time period only has an end date (inclusive) - all leaves that either occur on the end date or will finish
-      before the end date will be displayed
-    4) The time period does not have a start date or end date - all leaves will be returned
-* **Format:**
-  * `find-leave-range [start/START_DATE] [end/END_DATE]`
-* **Examples:**
+If you wish to view the leave records in HRMate that fall within a particular time period, 
+you can use the `find-leave-range` command to do so.
 
-| S/N | Command information                                                                                                                                                                     |
-|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1   | **Command:** `find-leave-range start/2023-10-27 end/2023-11-03` <br><br> **Output:** Returns all leaves that have at least one day in the period of 2023-10-27 and 2023-11-03 inclusive |
-| 2   | **Command:** `find-leave-range start/2023-10-27` <br><br> **Output:** Returns all leaves that have at least one day either on or after 2023-10-27                                       |
-| 3   | **Command:** `find-leave-range end/2023-11-03` <br><br> **Output:** Returns all leaves that have at least one day on or before 2023-11-03                                               |
-| 4   | **Command:** `find-leave-range` <br><br> **Output:** Returns all leaves                                                                                                                 |
+1. Type in the following [command](#glossary) in the [command box](#glossary):
+    `find-leave-range [start/START_DATE] [end/END_DATE]`, and replace `START_DATE` with the start date of the time period,
+    and `END_DATE` with the end date of the time period, both in the format `yyyy-MM-dd`.
+  - For instance: if you wanted to view all leave records that fall within the time period of 2023-10-27 and 2023-11-03 inclusive,
+    you would type in `find-leave-range start/2023-10-27 end/2023-11-03` in the command box.
+  - Do note that neither the start or end fields are required:
+    - If you wanted to view all leave records that start on or after 2023-10-27, you can type in `find-leave-range start/2023-10-27`
+    - If you wanted to view all leave records that end on or before 2023-11-03, you can type in `find-leave-range end/2023-11-03`
+    - If you wanted to view all leave records, you can type in `find-leave-range`
+2. Press `Enter` to execute the command. You should see the leave records that fall within the time period you specified.
 
-* **Acceptable Values:**
-  * The dates provided for START_DATE and END_DATE must be of the format `yyyy-MM-DD`
-  * If both end date and start date are provided, the end date cannot occur before the start date
-* **Expected Output on Success:**
-  * GUI Changes: All leave applications that fall within the queried time period will be returned
-  * Message shown to user: "[number of leaves matched] leaves listed!"
-* **Expected Output on Failure:**
-  * `The end date is earlier than the start date!` - the start date cannot occur after the end date
+Here are some potential error messages that you may receive and here's how to solve them:
+
+| Error message | Why it happens | Fix |
+|---------------|----------------|-----|
+| `The end date is earlier than the start date!` | The end date you provided is earlier than the start date | Make sure that the end date is later than the start date |
+| `Date should be valid and in a format of "yyyy-MM-dd"` | The date you provided is not in the format `yyyy-MM-dd` | Make sure that the date you provided is in the format `yyyy-MM-dd` |
+
 
 ### Find leave records by leave status: `find-leave-status`
 
