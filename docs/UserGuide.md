@@ -88,11 +88,13 @@ When a new employee joins, you can use the `add` [command](#glossary) to add the
 
 Here are the potential error messages that you may receive and here's how to fix them:
 
+
 | Error message                                                                                                                                          | Why it happens                                                                                                  | Fix                                                                                                                                                                                                                                                                                                                                                                                                              |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Invalid command format!`                                                                                                                              | The command you input does not follow the specified format                                                      | Ensure the command you entered follows the following format: `add n/NAME p/PHONE_NUMBER e/EMAIL_ADDRESS a/HOME_ADDRESS [t/TAG]...`, replacing `NAME` with employee name, `PHONE_NUMBER` with employee phone number, `EMAIL_ADDRESS` with employee email address, `HOME_ADDRESS` with employee home address. `[t/TAG]...` is optional, with `[t/TAG]` representing one or more tags and `TAG` being the tag name. |
 | `FIELD should FORMAT` where `FIELD` is an input like `Names` or `Phone numbers` and `FORMAT` contains additional information about the field's format. | The input does not follow the format prescribed. For example, the entered phone number might contain alphabets. | Follow the on screen message to fix the field in question. For example, `Phone numbers should only contain numbers, and it should be at least 3 digits long` means that the input phone number does not follow the prescribed format.                                                                                                                                                                            |
 | `This employee already exists in the address book`                                                                                                     | The provided employee name is already found in HRMate                                                           | Use another name for the employee. For example, if trying to add another "John Doe", use the name "John Doe (HR)" to differentiate between the existing John Doe. HRMate does this name checking to prevent unintentional duplicate employee entries.                                                                                                                                                            |
+
 
 ### Listing all employees: `list`
 
@@ -129,6 +131,7 @@ If the employee is not found, consider using <a href="">list</a> or any <a href=
 
 Here are the potential error messages that you may receive and here's how to fix them:
 
+
 | Error message                                                         | Why it happens                                                        | Fix                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Invalid command format!`                                             | The command you input does not follow the specfied format             | Ensure the command you entered follows the following format: `add-tag INDEX t/TAG...`, replacing INDEX with the index of the employee currently, `TAG` is the name of the tag to be added and `t/TAG...` representing one or more tags. |
@@ -136,6 +139,7 @@ Here are the potential error messages that you may receive and here's how to fix
 | `The person index provided is invalid`                                | The index specified does not refer to any employee                    | Double check if the index appears in the employee list. Alternatively, use [list]() or any [find commands]() to locate the employee in the employee list. Afterwards, use the correct employee index in the `add-tag` command.          |
 | `The employee already has some of the tags`                           | The employee already has some of the tags which you are trying to add | Remove the tags the employee has from the input command. For example, for an employee who already has the full-time tag, the command `add-tag 2 t/full-time t/remote` would not work. Instead try `add-tag 2 t/remote`.                 |
 | `Tags names only allows alphanumeric characters, spaces, and dashes.` | The tags input contains illegal characters                            | Remove the illegal characters from the input.                                                                                                                                                                                           |
+
 
 #### Removing tags from employees : `delete-tag`
 1. Get the [index](#glossary) of the employee in the [employee list](#glossary).
@@ -150,6 +154,7 @@ If the employee is not found, consider using [list]() or any [find commands]() t
 
 Here are the potential error messages you may receive and here's how to fix them:
 
+
 | Error message                                                         | Why it happens                                                       | Fix                                                                                                                                                                                                                                          |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Invalid command format!`                                             | The command you input does not follow the specfied format            | Ensure the command you entered follows the following format: `delete-tag INDEX t/TAG...`, replacing INDEX with the index of the employee currently, `TAG` is the name of the tag to be deleted and `t/TAG...` representing one or more tags. |
@@ -157,6 +162,7 @@ Here are the potential error messages you may receive and here's how to fix them
 | `The person index provided is invalid`                                | The index specified does not refer to any employee                   | Double check if the index appears in the employee list. Alternatively, use [list]() or any [find commands]() to locate the employee in the employee list. Afterwards, use the correct employee index in the `delete-tag` command.            |
 | `Some of the tags are not found on this employee.`                    | The employee does not have some of the tags you are trying to delete | Remove the tags not found on the employee from the input command. For example, for an employee without the tag full-time, the command `delete-tag 2 t/full-time t/remote` does not work. Instead try `delete-tag 2 t/remote`.                |
 | `Tags names only allows alphanumeric characters, spaces, and dashes.` | The tags input contains illegal characters                           | Remove the illegal characters from the input.                                                                                                                                                                                                |
+
 
 #### Editing the name, phone number, email address, home address or tags of employees : `edit`
 1. Get the [index](#glossary) of the employee under the [employee list](#glossary).
