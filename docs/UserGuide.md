@@ -479,9 +479,9 @@ you can use the `find-leave-range` command to do so.
   - For instance: if you wanted to view all leave records that fall within the time period of 2023-10-27 and 2023-11-03 inclusive,
     you would type in `find-leave-range start/2023-10-27 end/2023-11-03` in the command box.
   - Do note that neither the start or end fields are required:
-    - If you wanted to view all leave records that start on or after 2023-10-27, you can type in `find-leave-range start/2023-10-27`
-    - If you wanted to view all leave records that end on or before 2023-11-03, you can type in `find-leave-range end/2023-11-03`
-  - If you wanted to view all leave records, you can type in `find-leave-range`
+    - If you wanted to view all leave records that start on or after 2023-10-27, you can type in `find-leave-range start/2023-10-27`.
+    - If you wanted to view all leave records that end on or before 2023-11-03, you can type in `find-leave-range end/2023-11-03`.
+  - If you wanted to view all leave records, you can type in `find-leave-range` or `find-all-leave` instead.
 2. Press `Enter` to execute the command. You should see the leave records that fall within the time period you specified.
 
 Here are some potential error messages that you may receive and here's how to solve them:
@@ -500,7 +500,7 @@ If you wish to view the leave records in HRMate that have a particular status, y
     `find-leave-status STATUS`, and replace `STATUS` with the status of the leave records you wish to view.
   - For instance: if you wanted to view all leave records that have been approved, you would type in `find-leave-status APPROVED` in the command box.
   - Do note that the status field is required, and the status must be either `APPROVED`, `PENDING` or `REJECTED`.
-    - The status is not case-sensitive, so `APPROVED`, `Approved` and `approved` are all valid.
+    - The status is case-sensitive. For instance, `approved` is not a valid status. Ensure you use the correct casing, which is `APPROVED`.
     - You can only specify one status at a time.
   - If you wish to view all leave records, you can use the `find-all-leave` command instead.
 2. Press `Enter` to execute the command. You should see the leave records that have the status you specified.
