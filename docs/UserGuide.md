@@ -6,9 +6,11 @@
 
 # HRMate User Guide
 
-HRMate is a **desktop app for managing employee records, optimized for use via a Command Line Interface** (CLI) while
-still having the benefits of a Graphical User Interface (GUI). If you can type fast, HRMate can get your contact management
-tasks done faster than traditional GUI apps.
+
+Hi HR managers, this is HRMate. HRMate is a **desktop app for managing employee and leave records**.
+HRMate uses a Command Line Interface ([CLI](#glossary)) and Graphical User Interface ([GUI](#glossary)).
+That means that we are optimized for fast typers like you, and can help you complete your HR tasks faster than traditional HR apps like Oracle and SAP.
+This user guide aims to help new users quickly familiarise themselves with HRMate and help experienced users to explore advanced features of HRMate, with the goal of using HRMate to better facilitate your HR needs.
 
 <!-- * Table of Contents -->
 <page-nav-print></page-nav-print>
@@ -21,7 +23,14 @@ tasks done faster than traditional GUI apps.
 
 2. Download the latest `hrmate.jar` from [to be updated]().
 
-3. Copy the file to the folder you want to use as the _home folder_ for your HRMate.
+
+<box type="info" seamless>
+    <ul>
+        <li><strong>For Mac users:</strong> open the Terminal app on your Mac</li>
+        <li><strong>For Window users:</strong> press the windows key, type `powershell` and press "Enter" on your keyboard</li>
+    </ul>
+    See <a href="#faq">How do I open a terminal?</a> for more information.
+</box>
 
 4. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar hrmate.jar` command to run the application.<br>
    A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
