@@ -94,7 +94,7 @@ An app similar to the one below should appear in a few seconds. The app is popul
 We have added some annotations in <span style="color:red">red</span> so that you can understand the app visually.
 ![Ui](images/Ui-annotated.png)
 
-6. You can try typing some commands into the command box and pressing "enter" to execute. We have listed down some commands for you to try. 
+6. You can try typing some commands into the command box and pressing "Enter" to execute. We have listed down some commands for you to try. 
  - `help`: Opens the help window.
  - `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`: Adds an employee named `John Doe` to the employee list.
  - `list`: Lists all employees.
@@ -202,7 +202,7 @@ Here's how to add an employee:
 
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
 
-2. Press "enter" on your keyboard and you should see the person information at the end of the employee list. 
+2. Press "Enter" on your keyboard and you should see the person information at the end of the employee list. 
 
 
 Here are the potential error messages that you may receive and here's how to fix them:
@@ -241,7 +241,7 @@ Use the `list` command to view all employees that are currently listed in the em
 Here's how to use the `list` command:
 
 1. Type in the following command in the command box: `list`.
-2. Press "enter" on your keyboard and you should see the information of all employees listed in the employee list.
+2. Press "Enter" on your keyboard and you should see the information of all employees listed in the employee list.
 
 <box type='info'>
 This command does not require any parameters. However, to account for possible typing mistakes, HRMate reads in inputs like `list 123`, `list abc`, and `list 1a2b` all as the command `list`.
@@ -276,7 +276,7 @@ Here's how to find employees by name:
 
 </box>
 
-  2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list.
+  2.  Press "Enter" on your keyboard and you should see the employees matched being listed in the employee list.
     
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -293,7 +293,7 @@ useful if you want to find employees by their associated tags using the [`find-a
 Here's how to view all currently used tags:
 
 1. Type in the following command in the command box: `view-tag`.
-2. Press "enter" on your keyboard and you should see a list of all tags currently in use within the employee list.
+2. Press "Enter" on your keyboard and you should see a list of all tags currently in use within the employee list.
 
 
 <box type='info'>
@@ -331,7 +331,7 @@ Here's how to use the `find-all-tag` command:
   - However, if you want to find employees with tag `remote`, but only entered `re` as the tag name, NO employees with tag `remote` will be found, instead, employees with tag `re` will be found. Note that only tags containing the entire specified word are matched.
 </box>
 
-2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
+2.  Press "Enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
 
 
 
@@ -367,7 +367,7 @@ Here's how to use the `find-some-tag` command:
   - However, if you want to find employees with tag `remote`, but only entered `re` as the tag name, NO employees with tag `remote` will be found, instead, employees with tag `re` will be found. Note that only tags containing the entire specified word are matched.
 </box>
 
-2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
+2.  Press "Enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
     
 
 
@@ -405,7 +405,7 @@ If the employee is not found, consider using <a href="#listing-all-employees-lis
 
  </box>
 
-3. Press "enter" on your keyboard and you should see the input tags added to the employee specified.
+3. Press "Enter" on your keyboard and you should see the input tags added to the employee specified.
 
 Here are the potential error messages that you may receive and here's how to fix them:
 
@@ -436,7 +436,7 @@ If the employee is not found, consider using [list](#listing-all-employees-list)
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
 
 </box>
-3. Press "enter" on your keyboard and you should see the input tags removed from the employee specified.
+3. Press "Enter" on your keyboard and you should see the input tags removed from the employee specified.
 
 Here are the potential error messages you may receive and here's how to fix them:
 
@@ -502,7 +502,7 @@ In the second example, the employee will have all tags removed. No tags will be 
 Therefore, to avoid unintentionally losing any information while editing tags, we recommend using the <a href="#adding-tags-to-employees--add-tag">add tag</a> and <a href="#removing-tags-from-employees--delete-tag">delete-tag</a> commands instead for editing tags.
 </box>
 
-3. Press "enter" on your keyboard and you should see the changes applied to the employee.
+3. Press "Enter" on your keyboard and you should see the changes applied to the employee.
 
 | Error message                                                                                                                                          | Why it happens                                                                                                  | Fix                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -548,7 +548,7 @@ If the employee is not found, consider using <a href= "#listing-all-employees-li
 <a href= "#editing-the-name-phone-number-email-address-home-address-or-tags-of-employees--edit">edit</a> command instead to modify the record.
 </box>
 
-3. Press "enter" on your keyboard and you should see the employee removed from the employee list with all leaves related to that employee in the leave list being removed.
+3. Press "Enter" on your keyboard and you should see the employee removed from the employee list with all leaves related to that employee in the leave list being removed.
 
 ![After Delete](images/after-delete.png)
 
@@ -697,7 +697,7 @@ There is a status field of leave that is `PENDING` by default when a leave is ad
 Therefore, to change the status of leave, please use the <a href= "#approve-leave-application-by-index-approve-leave">approve-leave</a> or <a href= "#reject-leave-application-by-index-reject-leave">reject-leave</a> commands instead to modify the record.
 </box>
 
-3. Press "enter" on your keyboard and you should see the leave information at the end of the overall leave list. Note that if there is no description field added, the description will be `NONE` by default.
+3. Press "Enter" on your keyboard and you should see the leave information at the end of the overall leave list. Note that if there is no description field added, the description will be `NONE` by default.
     
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -737,7 +737,7 @@ Here's how to use the `find-leave-range` command:
  - If you wanted to view all leave applications, you can type in `find-leave-range` or [`find-all-leave`](#view-all-leaves-find-all-leave) instead.
 </box>
 
-2. Press `Enter` to execute the command. You should see the leave applications that fall within the time period you specified.
+2. Press "Enter" to execute the command. You should see the leave applications that fall within the time period you specified.
 
 
 Here are some potential error messages that you may receive and here's how to solve them:
@@ -771,7 +771,7 @@ Here's how to use the `find-leave-status` command:
 
  </box>
 
-2. Press `Enter` to execute the command. You should see the leave applications that have the status you specified.
+2. Press "Enter" to execute the command. You should see the leave applications that have the status you specified.
 
 
 Here are some potential error messages that you may receive and here's how to solve them:
@@ -802,7 +802,7 @@ Here's how to use the `find-leave` command:
  - If you wish to view all leave applications, you can use the [`find-all-leave`](#view-all-leaves-find-all-leave) command instead.
 </box>
 
-3. Press `Enter` to execute the command. You should see the leave applications that belong to the employee with the index you specified.
+3. Press "Enter" to execute the command. You should see the leave applications that belong to the employee with the index you specified.
 
 
 ![find-leave](images/find-leaveUI.png)
@@ -824,7 +824,7 @@ Here's how to view all leave applications in the leave list:
 
 1. Type in the following command in the command box:
    `find-all-leave`
-2. Press `Enter` to execute the command. You should see all the leave applications in HRMate.
+2. Press "Enter" to execute the command. You should see all the leave applications in HRMate.
 
 
 ### Edit a leave application
@@ -844,7 +844,7 @@ If the leave application is not found, consider using `find-all-leave` or any `f
 </box>
 
 2. Type in the following command in the command box `approve-leave LEAVE_LIST_INDEX`
-3. Press "enter" on your keyboard and the specified leave application is approved.
+3. Press "Enter" on your keyboard and the specified leave application is approved.
 
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -865,7 +865,7 @@ If the leave application is not found, consider using `find-all-leave` or any `f
 </box>
 
 2. Type in the following command in the command box `reject-leave LEAVE_LIST_INDEX`
-3. Press "enter" on your keyboard and the specified leave application is approved.
+3. Press "Enter" on your keyboard and the specified leave application is approved.
 
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -915,7 +915,7 @@ If the employee is not found, consider using `find-all-leave` or any `find comma
 To update the status of a leave application, we recommend you to use the `approve-leave` or `reject-leave` commands to approve or reject the leave applications. It is possible to update the status of the leave applications with the `edit-leave` command, but it must be either APPROVED, PENDING or REJECTED (in all capital letters).
 </box>
 
-3. Press "enter" on your keyboard and you should see the changes applied to the leave.
+3. Press "Enter" on your keyboard and you should see the changes applied to the leave.
 
 Here are some potential error messages that you may receive and here's how to solve them:
 
@@ -953,7 +953,7 @@ Here's how to use the `delete-leave` command to remove a leave application:
    - The index cannot exceed the number of entries in the leave book
 
 
-2. Press `Enter` on your keyboard and you should see the leave application removed from HRMate.
+2. Press "Enter" on your keyboard and you should see the leave application removed from HRMate.
 
 
 ![delete-leave](images/delete-leaveUI.png)
