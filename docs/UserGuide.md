@@ -179,13 +179,31 @@ Use the `add` command to add an employee to the employee list.
 
 Here's how to add an employee:
 
-1. Type in the following command in the [command box](#glossary): `add n/NAME p/PHONE_NUMBER e/EMAIL_ADDRESS a/HOME_ADDRESS [t/TAG]...`, replace `NAME` with employee name, `PHONE_NUMBER` with employee phone number `EMAIL_ADDRESS` with employee email address and `HOME_ADDRESS` with employee home address. `[t/TAG]...` is an optional field with one or more tags, with `TAG` being the name of the tag.
- - For instance, if you have an employee name John Doe with phone number 98765432, email johnd@example.com, home address John Street, block 123 #01-01 and tags full-time and remote, type in the command `add n/John Doe p/98765432 e/johnd@example.com a/John Street, block 123 #01-01 t/full-time t/remote`
- - If your employee does not require any tags, using the same information as above, the command would be `add n/John Doe p/98765432 e/johnd@example.com a/John Street, block 123 #01-01`
+1. Type in the following command in the [command box](#glossary): `add n/NAME p/PHONE_NUMBER e/EMAIL_ADDRESS a/HOME_ADDRESS [t/TAG]...`, replace 
+* `NAME` with employee name, 
+* `PHONE_NUMBER` with employee phone number 
+* `EMAIL_ADDRESS` with employee email address and 
+* `HOME_ADDRESS` with employee home address. 
+* `[t/TAG]...` is an optional field with one or more tags, with `TAG` being the name of the tag.
+
+<box>
+ 
+ For instance, if you have an employee name John Doe with phone number 98765432, email johnd@example.com, home address John Street, block 123 #01-01 and tags full-time and remote, type in the command 
+ 
+ `add n/John Doe p/98765432 e/johnd@example.com a/John Street, block 123 #01-01 t/full-time t/remote`
+
+ <div style="page-break-after: always;"></div>
+
+ If your employee does not require any tags, using the same information as above, the command would be 
+ 
+ `add n/John Doe p/98765432 e/johnd@example.com a/John Street, block 123 #01-01`
+
+ </box> 
+
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
+
 2. Press "enter" on your keyboard and you should see the person information at the end of the employee list. 
 
-<div style="page-break-after: always;"></div>
 
 Here are the potential error messages that you may receive and here's how to fix them:
 
@@ -241,12 +259,23 @@ Use the `find` command to find employees by name. This command will find employe
 
 Here's how to find employees by name:
 
-  1. Type in the following command in the command box `find NAME....` where `NAME...` are to be replaced with one or more names of the employees for search.
-     * The words for search are case insensitive, meaning you do not have to worry about the capitalization of the words entered. 
+  1. Type in the following command in the command box `find NAME....` where 
+  
+  * `NAME...` are to be replaced with one or more names of the employees for search.
+  
+  <box type='info'>
+  The words for search are case insensitive, meaning you do not have to worry about the capitalization of the words entered. 
+  </box>
+
+<box>
+
   - For instance, to find employees whose names contain `Martin`, type `find martin` to the command box.
-  - Take another example, suppose we have employees `alex` and `Alex`, for input `find alex`, both employees will be shown as a reult.
+  - Take another example, suppose we have employees `alex` and `Alex`, for input `find alex`, both employees will be shown as a result.
   - For another instance, to find employees whose names contain either "*Harry*" or "*Redknapp*, type `find harry redknapp` to the command box.
   - However, if you want to find employees whose names contain `martin` but only entered `mar`, NO employee named Martin will be found, instead employee named Mar will be found. Note that he search looks for names containing the entire specified word.
+
+</box>
+
   2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list.
     
 | Error message | Why it happens | Fix |
@@ -286,12 +315,27 @@ To find employees by a set of specified tags, use the `find-all-tag` command. Th
 
 Here's how to use the `find-all-tag` command:
 
-1. Type in the following command in the command box `find-all-tag t/TAG [t/MORE_TAGS]...` where `TAG` is to be replaced with the name of the tags.
-   * At least one tag should be entered for search and more tags can be entered if you want to search for more.
-   * The tag names are case sensitive, meaning the capitalization of the words entered matters. 
+1. Type in the following command in the command box `find-all-tag t/TAG [t/MORE_TAGS]...` where 
+* `TAG` is to be replaced with the name of the tags.
+<box type='info'>
+
+   At least one tag should be entered for search and more tags can be entered if you want to search for more.
+
+
+   The tag names are case sensitive, meaning the capitalization of the words entered matters. 
+</box>
+
+<box>
+
   - For instance, to find employees with both tag `remote` and tag `full time`, type `find-all-tag t/remote t/full time` to the command box.
   - However, if you want to find employees with tag `remote`, but only entered `re` as the tag name, NO employees with tag `remote` will be found, instead, employees with tag `re` will be found. Note that only tags containing the entire specified word are matched.
+</box>
+
 2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
+
+
+
+Here are some of the potential error messages that you may receive and here's how to fix them:
     
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -307,13 +351,26 @@ To find employees by at least one of the specified tags, use the `find-some-tag`
 
 Here's how to use the `find-some-tag` command:
 
-1. Type in the following command in the command box `find-some-tag t/TAG [t/MORE_TAGS]...` where `TAG` is to be replaced with the name of the tags.
-   * At least one tag should be entered for search and more tags can be entered if you want to search for more.
-   * The tag names are case sensitive, meaning the capitalization of the words entered matters. 
+1. Type in the following command in the command box `find-some-tag t/TAG [t/MORE_TAGS]...` where 
+* `TAG` is to be replaced with the name of the tags.
+
+<box type='info'>
+   At least one tag should be entered for search and more tags can be entered if you want to search for more.
+
+
+   The tag names are case sensitive, meaning the capitalization of the words entered matters. 
+</box>
+
+<box>
+
   - For instance, to find employees with either tag `remote` and tag `full time`, type `find-some-tag t/remote t/full time` to the command box.
   - However, if you want to find employees with tag `remote`, but only entered `re` as the tag name, NO employees with tag `remote` will be found, instead, employees with tag `re` will be found. Note that only tags containing the entire specified word are matched.
+</box>
+
 2.  Press "enter" on your keyboard and you should see the employees matched being listed in the employee list. Note that employees with additional tags other than the specified ones will also be displayed.
     
+
+
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
 | `Invalid command format!` | The command you input does not follow the specified format | Ensure the command you entered follows the following format: `find-all-tag t/TAG [t/MORE_TAGS]...` where `TAG` is to be replaced with the name of the tags, and capitalization of the tag names mattered (case-sensitive). At least one tag should be entered for search and more tags can be entered if you want to search for more. |
@@ -340,8 +397,14 @@ If the employee is not found, consider using <a href="#listing-all-employees-lis
 </box>
 
 2. Type in the following command in the command box `add-tag INDEX t/TAG...` where `INDEX` is the [index](#glossary) of the employee in the list currently, `TAG` is the name of the tag to be added and `t/TAG...` representing one or more tags. 
+
+<box>
+
  - For instance, if you want to add the tags full-time and remote to the employee indexed 2, type `add-tag 2 t/full-time t/remote` to the command box.
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
+
+ </box>
+
 3. Press "enter" on your keyboard and you should see the input tags added to the employee specified.
 
 Here are the potential error messages that you may receive and here's how to fix them:
@@ -366,8 +429,13 @@ If the employee is not found, consider using [list](#listing-all-employees-list)
 </box>
 
 2. Type in the following command in the command box `delete-tag INDEX t/TAG...` where `INDEX` is the index of the employee in the list currently, `TAG` is the name of the tag to be deleted and `t/TAG...` representing one or more tags. 
+
+<box>
+
  - For instance, if you want to remove the tags full-time and remote to the employee indexed 2, type `delete-tag 2 t/full-time t/remote` to the command box.
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
+
+</box>
 3. Press "enter" on your keyboard and you should see the input tags removed from the employee specified.
 
 Here are the potential error messages you may receive and here's how to fix them:
@@ -394,10 +462,38 @@ Here's how to use the `edit` command to edit an employee's information:
 If the employee is not found, consider using <a href="#listing-all-employees-list">list</a> or any <a href="#find-an-employee-record">find commands</a> to locate the employee in the employee list.
 </box>
 
-2. Type in the following command in the command box `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL_ADDRESS] [a/HOME_ADDRESS] [t/TAG]...` where `INDEX` is the index of the employee in the list currently, `[n/NAME]`, `[p/PHONE_NUMBER]`, `[e/EMAIL_ADDRESS]`, `[a/HOME_ADDRESS]` are optional fields which require changing, replacing `NAME` with employee name, `PHONE_NUMBER` with employee phone number, `EMAIL_ADDRESS` with employee email address and `HOME_ADDRESS` with employee home address. `[t/TAG]...` is an optional field representing one or more tags where `TAG` is the tag name. Note that at least one field to edit must be present and only the fields present will be edited.
- - For example, to change the phone number, email address and tags of the employee indexed 2 to 98765432, johndoe@example.com and full-time and remote, type in the command `edit 2 p/98765432 e/johndoe@example.com t/full-time t/remote`. Note that the name and home address will remain unchanged.
- - In another example, to change the home address of the employee indexed 1 to John street, block 123 #01-01 and remove all tags from the employee, type in the command `edit 1 a/John street, block 123 #01-01 t/`. Note that the name, phone number and email_address will remain unchanged.
+2. Type in the following command in the command box `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL_ADDRESS] [a/HOME_ADDRESS] [t/TAG]...` where 
+
+* `INDEX` is the index of the employee in the list currently, 
+* `NAME` with employee name, 
+* `PHONE_NUMBER` with employee phone number, 
+* `EMAIL_ADDRESS` with employee email address and 
+* `HOME_ADDRESS` with employee home address. 
+* `[t/TAG]...` is an optional field representing one or more tags where `TAG` is the tag name. 
+
+<box type='info'>
+
+Note that `NAME`, `PHONE_NUMBER`, `EMAIL_ADDRESS`, `HOME_ADDRESS` and `TAG` are optional fields. Also, at least one field to edit must be present and only the fields present will be edited.
+</box>
+
+<box>
+
+ For example, to change the phone number, email address and tags of the employee indexed 2 to 98765432, johndoe@example.com and full-time and remote, type in the command 
+ 
+ `edit 2 p/98765432 e/johndoe@example.com t/full-time t/remote`. 
+ 
+ > Note that the name and home address will remain unchanged.
+
+<div style="page-break-after: always;"></div>
+
+ In another example, to change the home address of the employee indexed 1 to John street, block 123 #01-01 and remove all tags from the employee, type in the command 
+ 
+ `edit 1 a/John street, block 123 #01-01 t/`. 
+ 
+ > Note that the name, phone number and email_address will remain unchanged.
+
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
+ </box>
 
 <box type="warning" seamless>
 If the tag prefix is specified, all existing tags under the employee will be removed and replaced with the new tags in the command.
@@ -435,16 +531,25 @@ Here's how to delete an employee record:
 <box type="info" seamless>
 If the employee is not found, consider using <a href= "#listing-all-employees-list">list</a> or any <a href= "#find-an-employee-record">find commands</a> to locate the employee in the employee list.
 </box>
-2. Type in the following command in the command box `delete INDEX` where `INDEX` is to be replaced with the index of the employee in the list currently
- - For instance, to remove the whole record of the employee indexed 1, type `delete 1` to the command box.
+
+2. Type in the following command in the command box `delete INDEX` where 
+
+* `INDEX` is to be replaced with the index of the employee in the list currently
+
+
+ For instance, to remove the whole record of the employee indexed 1, type `delete 1` to the command box.
+ 
+
 ![Before Delete](images/before-delete.png)
+
 <box type="warning" seamless>
-Once you delete the record, the records will be no longer available in HRMate and cannot be recovered.
-Therefore, to avoid unintentionally losing any information of the employee, if you just want to modify some information, we recommend using the
+  Once you delete the record, the records will be no longer available in HRMate and cannot be recovered.
+  Therefore, to avoid unintentionally losing any information of the employee, if you just want to modify some information, we recommend using the
 <a href= "#editing-the-name-phone-number-email-address-home-address-or-tags-of-employees--edit">edit</a> command instead to modify the record.
 </box>
 
 3. Press "enter" on your keyboard and you should see the employee removed from the employee list with all leaves related to that employee in the leave list being removed.
+
 ![After Delete](images/after-delete.png)
 
 | Error message                          | Why it happens                                                        | Fix                                                                                                                                                                                                                                                                                        |
@@ -533,6 +638,8 @@ you will like to give your file. Your files will be saved in CSV format automati
 Finder (if using Mac OS). From there, click on the `export` folder.
 4. You should see your file in the `export` folder.
 
+<div style="page-break-after: always;"></div>
+
 Here are potential error messages that you may receive and here's how to fix them:
 
 | Error Message                                                       | Why it happens                                   | Fix                                                                                                                                                                                                                   |
@@ -573,8 +680,18 @@ If the employee is not found, consider using <a href= "#listing-all-employees-li
    * `END_DATE` with the end date of the leaves and it must be the same as or later than the start date. Dates are in a format of `yyyy-MM-dd`
    * `[d/DESCRIPTION]` is an optional field with `DESCRIPTION` to be replaced with the description of the leave.
    * Note that duplicated title and concurrent leave (overlapping date duration of leaves) are allowed.
-  - For instance, to add a leave of one day on 2023-11-01 to employee indexed 1 with a title of `Sample Leave 1`, type `add-leave 1 title/Sample Leave 1 start/2023-11-01 end/2023-11-01`` to the command box.
-  - For another instance, to add a leave of two days from 2023-11-01 to 2023-11-02 to employee indexed 2 with a title of `Sample Leave 2` and a description of `Sample Description`, type `add-leave 2 title/Sample Leave 2 start/2023-11-01 end/2023-11-02 d/Sample Description` to the command box.
+
+<box>
+
+  For instance, to add a leave of one day on 2023-11-01 to employee indexed 1 with a title of `Sample Leave 1`, type 
+  
+  `add-leave 1 title/Sample Leave 1 start/2023-11-01 end/2023-11-01`
+
+  For another instance, to add a leave of two days from 2023-11-01 to 2023-11-02 to employee indexed 2 with a title of `Sample Leave 2` and a description of `Sample Description`, type 
+  
+  `add-leave 2 title/Sample Leave 2 start/2023-11-01 end/2023-11-02 d/Sample Description`
+</box>
+
 <box type="info" seamless>
 There is a status field of leave that is `PENDING` by default when a leave is added. Please DO NOT enter any status field of the leave, no recognitions of the status field and any other prefix are provided.
 Therefore, to change the status of leave, please use the <a href= "#approve-leave-application-by-index-approve-leave">approve-leave</a> or <a href= "#reject-leave-application-by-index-reject-leave">reject-leave</a> commands instead to modify the record.
@@ -605,14 +722,21 @@ To find leave applications by time period, use the `find-leave-range` command. T
 Here's how to use the `find-leave-range` command:
 
 1. Type in the following command in the command box:
-   `find-leave-range [start/START_DATE] [end/END_DATE]`, and replace `START_DATE` with the start date of the time period,
-   and `END_DATE` with the end date of the time period, both in the format `yyyy-MM-dd`.
+   `find-leave-range [start/START_DATE] [end/END_DATE]`, and replace 
+   
+* `START_DATE` with the start date of the time period, and 
+* `END_DATE` with the end date of the time period, both in the format `yyyy-MM-dd`.
+
+<box>
+
  - For instance: if you wanted to view all leave applications that fall within the time period of 2023-10-27 and 2023-11-03 inclusive,
    you would type in `find-leave-range start/2023-10-27 end/2023-11-03` in the command box.
  - Do note that neither the start or end fields are required:
    - If you wanted to view all leave applications that start on or after 2023-10-27, you can type in `find-leave-range start/2023-10-27`.
    - If you wanted to view all leave applications that end on or before 2023-11-03, you can type in `find-leave-range end/2023-11-03`.
  - If you wanted to view all leave applications, you can type in `find-leave-range` or [`find-all-leave`](#view-all-leaves-find-all-leave) instead.
+</box>
+
 2. Press `Enter` to execute the command. You should see the leave applications that fall within the time period you specified.
 
 
@@ -624,7 +748,10 @@ Here are some potential error messages that you may receive and here's how to so
 | `The end date is earlier than the start date!`         | The end date you provided is earlier than the start date | Make sure that the end date is later than the start date           |
 | `Date should be valid and in a format of "yyyy-MM-dd"` | The date you provided is not in the format `yyyy-MM-dd`  | Make sure that the date you provided is in the format `yyyy-MM-dd` |
 
+<box type='info'>
+
 Note: `yyyy-MM-dd` refers to the format of the date in the form of year-month-day. For example, 2023-11-01 refers to 1st November 2023.
+</box>
 
 #### Find leave applications by leave status: `find-leave-status`
 
@@ -634,10 +761,16 @@ Here's how to use the `find-leave-status` command:
 
 1. Type in the following command in the command box:
    `find-leave-status STATUS`, and replace `STATUS` with the status of the leave applications you wish to view.
+
+<box>
+
  - For instance: if you wanted to view all leave applications that have been approved, you would type in `find-leave-status APPROVED` in the command box.
  - Do note that the status field is required, and the status must be either `APPROVED`, `PENDING` or `REJECTED`.
    - You can only specify one status at a time.
  - If you wish to view all leave applications, you can use the [`find-all-leave`](#view-all-leaves-find-all-leave) command instead.
+
+ </box>
+
 2. Press `Enter` to execute the command. You should see the leave applications that have the status you specified.
 
 
@@ -659,11 +792,16 @@ Here's how to use the `find-leave` command:
 1. Get the [index](#glossary) of the employee under the employee list. View this image in [quick start](#quick-start) for more information.
 2. Type in the following command in the command box:
    `find-leave INDEX`, and replace `INDEX` with the index of the employee whose leave applications you wish to view.
+
+<box>
+
  - For instance: if you wanted to view all leave applications that belong to the employee with index 1, you would type in `find-leave 1` in the command box.
  - Do note that the index field is required, and the index must be a valid number.
    - The index must be a positive number.
    - The index must be within the range of the number of employees in HRMate.
  - If you wish to view all leave applications, you can use the [`find-all-leave`](#view-all-leaves-find-all-leave) command instead.
+</box>
+
 3. Press `Enter` to execute the command. You should see the leave applications that belong to the employee with the index you specified.
 
 
@@ -748,9 +886,29 @@ Here's how to use the `edit-leave` command to edit a leave application:
 If the employee is not found, consider using `find-all-leave` or any `find commands` to locate the leave in the leave list.
 </box>
 
-2. Type in the following command in the command box `edit-leave INDEX [title/TITLE] [start/START_DATE] [end/END_DATE] [d/DESCRIPTION] [s/STATUS]` where `INDEX` is the index of the leave in the list currently, `[title/TITLE]`, `[start/START_DATE]`, `[end/END_DATE]`, `[d/DESCRIPTION]`, `[s/STATUS]` are optional fields which require changing, replacing `TITLE` with the title of the leave, `START_DATE` with the leave's start date, `END_DATE` with the leave's end date, `DESCRIPTION` with the title's description and `STATUS` with the leave's status. Note that at least one field to edit must be present and only the fields present will be edited.
+2. Type in the following command in the command box `edit-leave INDEX [title/TITLE] [start/START_DATE] [end/END_DATE] [d/DESCRIPTION] [s/STATUS]` where 
+* `INDEX` is the index of the leave in the list currently, 
+
+* `TITLE` with the title of the leave, 
+* `START_DATE` with the leave's start date, 
+* `END_DATE` with the leave's end date, 
+* `DESCRIPTION` with the title's description and 
+* `STATUS` with the leave's status. 
+
+<box type='info'>
+
+*  `TITLE`, `START_DATE`, `END_DATE`, `DESCRIPTION` and `STATUS` are optional fields which require changing. 
+* The start date and end date must be in the format `yyyy-MM-dd
+* At least one field to edit must be present and only the fields present will be edited.
+
+</box>
+
+<box>
+
  - For example, to change the title and description of the leave indexed 2 to John's sick leave and MC provided, type in the command `edit-leave 2 title/John's sick leave d/MC provided`. Note that the start date, end date, and status will remain unchanged.
  - Please refer to [how to interpret command formats](#how-to-interpret-command-formats) for more information
+
+</box>
 
  
 <box type='important'>
@@ -758,7 +916,8 @@ To update the status of a leave application, we recommend you to use the `approv
 </box>
 
 3. Press "enter" on your keyboard and you should see the changes applied to the leave.
-* Examples:
+
+Here are some potential error messages that you may receive and here's how to solve them:
 
 | Error message | Why it happens | Fix |
 |---------------|----------------|-----|
@@ -783,11 +942,18 @@ Use the `delete-leave` command to remove a leave application from HRMate. This c
 Here's how to use the `delete-leave` command to remove a leave application:
 
 1. Type in the following command in the command box: `delete-leave LEAVE_LIST_INDEX`, and replace `LEAVE_LIST_INDEX` with the index of the leave application you wish to remove.
+
+<box>
+
  - For instance, referring to the figure below: if you wanted to remove the leave application titled "medical leave" with employee "Bernice Yu", you would type in `delete-leave 2` in the command box.
+</box>
+
  - Do note that the index of the leave application you wish to remove must be a valid number
    - The index must be a positive number that is larger than 0
    - The index cannot exceed the number of entries in the leave book
-2. Press "enter" on your keyboard and you should see the leave application removed from HRMate.
+
+
+2. Press `Enter` on your keyboard and you should see the leave application removed from HRMate.
 
 
 ![delete-leave](images/delete-leaveUI.png)
